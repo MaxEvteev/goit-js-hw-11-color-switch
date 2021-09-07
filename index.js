@@ -16,12 +16,12 @@ const randomIntegerFromInterval = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
 };
 let colorIntervalId = null;
-function changeBodyBackgroundColor (array) {
+function changeColor (array) {
     refs.body.style.backgroundColor = colors[randomIntegerFromInterval(0,5)]
 };
 const onStartBtn = (e)=>{
     colorIntervalId = setInterval(()=>{
-        changeBodyBackgroundColor(colors)
+        changeColor(colors)
     }, 1000);
     refs.start.disabled = true;
     refs.stop.disabled = false;
